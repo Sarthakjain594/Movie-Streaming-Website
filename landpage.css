@@ -12,7 +12,7 @@
     right:0;
     width: 100%;
     height: 100vh;
-    z-index: 100;
+    z-index: 10000;
     /* background: url('Loader.webp'); your icon gif file path */
     background-repeat: no-repeat;
     background-color: rgb(187, 14, 14);
@@ -31,25 +31,24 @@
       margin: auto;
       background-color: black;
       z-index: 10000000;
-      transition: all linear 2s;
-      animation: preloader-animation 1.5s linear 0.05s infinite;
+      animation: preloader-animation 2s ease-in 0s infinite;
     }
 
     @keyframes preloader-animation {
-      10%{
-        transform: translateY(50vh);
+      0% {
+        transform: translateY(45vh);
         background:white;
       }
       25%{
         transform: translateY(0%);
-        background-color: black;
+        background-color: yellow;
       }
       50% {
-        transform:translateY(50vh) ;
-        background-color: white;
+        transform:translateY(45vh) ;
+        background-color: lightcyan;
       }
       75% {
-        transform:translateY(0%h) ;
+        transform:translateY(0%) ;
         background-color: black;
       }
       100% {
