@@ -12,11 +12,49 @@
     right:0;
     width: 100%;
     height: 100vh;
-    z-index: 99999999;
-    background: url('Loader.webp'); /* your icon gif file path */
+    z-index: 100;
+    /* background: url('Loader.webp'); your icon gif file path */
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: rgb(187, 14, 14);
     background-position: center;
+    }
+
+    div.ball {
+      height: 4rem;
+      width: 4rem ;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom:0;
+      right:0;
+      margin: auto;
+      background-color: black;
+      z-index: 10000000;
+      transition: all linear 2s;
+      animation: preloader-animation 2s;
+    }
+
+    @keyframes preloader-animation {
+      10%{
+        transform: translateY(50vh);
+        background:white;
+      }
+      25%{
+        transform: translateY(0%);
+        background-color: black;
+      }
+      50% {
+        transform:translateY(50vh) ;
+        background-color: white;
+      }
+      75% {
+        transform:translateY(0%h) ;
+        background-color: black;
+      }
+      100% {
+         transform:  scale(100000%);
+      }
     }
 
     #stop-scrolling {
